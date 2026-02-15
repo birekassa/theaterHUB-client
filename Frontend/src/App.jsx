@@ -97,8 +97,8 @@ function App() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-[#6B4A2E]">
-                Theater<span className="text-[#D4AF37]">HUB</span>
+              <h1 className="text-2xl font-bold text-primary-dark">
+                Theater<span className="text-secondary">HUB</span>
               </h1>
             </div>
             
@@ -108,12 +108,12 @@ function App() {
                 <li key={item}>
                   <a 
                     href="#" 
-                    className={`text-gray-700 hover:text-[#8B5E3C] transition-colors relative group ${
-                      item === 'Home' ? 'text-[#8B5E3C]' : ''
+                    className={`text-gray-700 hover:text-primary transition-colors relative group ${
+                      item === 'Home' ? 'text-primary' : ''
                     }`}
                   >
                     {item}
-                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D4AF37] transition-all group-hover:w-full ${
+                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full ${
                       item === 'Home' ? 'w-full' : ''
                     }`}></span>
                   </a>
@@ -126,9 +126,9 @@ function App() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden flex flex-col space-y-1.5 p-2 focus:outline-none"
             >
-              <span className={`w-6 h-0.5 bg-[#8B5E3C] transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-[#8B5E3C] transition-opacity ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`w-6 h-0.5 bg-[#8B5E3C] transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-primary transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-primary transition-opacity ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-primary transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
             </button>
           </div>
 
@@ -140,8 +140,8 @@ function App() {
                   <li key={item}>
                     <a 
                       href="#" 
-                      className={`block px-2 py-1 text-gray-700 hover:text-[#8B5E3C] ${
-                        item === 'Home' ? 'text-[#8B5E3C] font-medium' : ''
+                      className={`block px-2 py-1 text-gray-700 hover:text-primary ${
+                        item === 'Home' ? 'text-primary font-medium' : ''
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -156,7 +156,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#2C1810] to-[#8B5E3C] min-h-[500px] md:min-h-[600px] flex items-center justify-center text-center px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-r from-[#2C1810] to-primary min-h-[500px] md:min-h-[600px] flex items-center justify-center text-center px-4 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10" 
              style={{
@@ -167,9 +167,9 @@ function App() {
         
         <div className="relative z-10 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-fadeInUp">
-            Welcome to <span className="text-[#D4AF37] relative inline-block">
+            Welcome to <span className="text-secondary relative inline-block">
               TheaterHub
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-[#D4AF37] animate-slideIn"></span>
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-secondary animate-slideIn"></span>
             </span>
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-2 animate-fadeInUp animation-delay-200">
@@ -179,10 +179,10 @@ function App() {
             Discover, Book, and Experience the Magic of Live Theater
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp animation-delay-600">
-            <button className="px-8 py-3 bg-[#D4AF37] text-gray-900 rounded-full font-semibold hover:bg-[#C4A030] transform hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl">
+            <button className="px-8 py-3 bg-secondary text-gray-900 rounded-full font-semibold hover:bg-[#C4A030] transform hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl">
               Browse Shows
             </button>
-            <button className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-[#8B5E3C] transform hover:-translate-y-1 transition-all">
+            <button className="px-8 py-3 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-primary transform hover:-translate-y-1 transition-all">
               Register Theater
             </button>
           </div>
@@ -194,9 +194,9 @@ function App() {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#6B4A2E] mb-4 relative inline-block">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4 relative inline-block">
               All Events
-              <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#D4AF37]"></span>
+              <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-secondary"></span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Discover amazing performances near you
@@ -212,7 +212,7 @@ function App() {
                 placeholder="Search by event title, theater, or category..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-full focus:outline-none focus:border-[#8B5E3C] focus:ring-2 focus:ring-[#8B5E3C]/20 transition-all"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
               />
               <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-xl text-gray-400">
                 🔍
@@ -224,7 +224,7 @@ function App() {
               <select
                 value={filterBy}
                 onChange={(e) => setFilterBy(e.target.value)}
-                className="w-full md:w-auto px-4 py-2 border-2 border-gray-200 rounded-full focus:outline-none focus:border-[#8B5E3C] bg-white"
+                className="w-full md:w-auto px-4 py-2 border-2 border-gray-200 rounded-full focus:outline-none focus:border-primary bg-white"
               >
                 <option value="newest">Newest First</option>
                 <option value="oldest">Oldest First</option>
@@ -239,7 +239,7 @@ function App() {
                     key={filter}
                     className={`px-4 py-2 rounded-full font-medium transition-all ${
                       filter === 'All'
-                        ? 'bg-[#8B5E3C] text-white'
+                        ? 'bg-primary text-white'
                         : 'border-2 border-gray-200 text-gray-600 hover:bg-gray-100'
                     }`}
                   >
@@ -255,27 +255,27 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredEvents.map((event) => (
                 <div key={event.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition-all">
-                  <div className="h-48 bg-gradient-to-r from-[#2C1810] to-[#8B5E3C] flex items-center justify-center text-6xl text-[#D4AF37] relative">
-                    <span className="absolute top-3 left-3 bg-[#D4AF37] text-gray-900 px-2 py-1 rounded-full text-xs font-semibold">
+                  <div className="h-48 bg-gradient-to-r from-[#2C1810] to-primary flex items-center justify-center text-6xl text-secondary relative">
+                    <span className="absolute top-3 left-3 bg-secondary text-gray-900 px-2 py-1 rounded-full text-xs font-semibold">
                       {event.category}
                     </span>
                     {event.icon}
                   </div>
                   
                   <div className="p-5">
-                    <h3 className="text-xl font-bold text-[#6B4A2E] mb-2">{event.title}</h3>
+                    <h3 className="text-xl font-bold text-primary-dark mb-2">{event.title}</h3>
                     <p className="text-gray-600 text-sm mb-1 flex items-center gap-1">
                       <span>📍</span> {event.theater}
                     </p>
                     <p className="text-gray-500 text-sm mb-2 flex items-center gap-1">
                       <span>📅</span> {event.date}
                     </p>
-                    <p className="text-[#C41E3A] font-bold text-lg mb-4">
+                    <p className="text-accent font-bold text-lg mb-4">
                       From {event.price} ETB
                     </p>
                     
                     <div className="flex gap-2">
-                      <button className="flex-1 bg-[#8B5E3C] text-white px-4 py-2 rounded-full hover:bg-[#6B4A2E] transition-colors font-medium">
+                      <button className="flex-1 bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors font-medium">
                         Book Now
                       </button>
                       <button className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-red-100 transition-colors text-xl">
@@ -291,7 +291,7 @@ function App() {
               <p className="text-gray-500 text-lg mb-4">No events found matching "{searchTerm}"</p>
               <button 
                 onClick={() => setSearchTerm('')}
-                className="px-6 py-2 border-2 border-[#8B5E3C] text-[#8B5E3C] rounded-full hover:bg-[#8B5E3C] hover:text-white transition-colors font-medium"
+                className="px-6 py-2 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors font-medium"
               >
                 Clear Search
               </button>
@@ -300,7 +300,7 @@ function App() {
 
           {/* Load More Button */}
           <div className="text-center mt-12">
-            <button className="px-8 py-3 border-2 border-[#8B5E3C] text-[#8B5E3C] rounded-full font-semibold hover:bg-[#8B5E3C] hover:text-white transition-all transform hover:-translate-y-1">
+            <button className="px-8 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1">
               Load More Events
             </button>
           </div>
@@ -310,9 +310,9 @@ function App() {
       {/* How It Works */}
       <section className="py-16 px-4 bg-gradient-to-r from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#6B4A2E] mb-4 relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4 relative inline-block">
             How It Works
-            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#D4AF37]"></span>
+            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-secondary"></span>
           </h2>
           <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
             Four simple steps to your theater experience
@@ -326,10 +326,10 @@ function App() {
               { num: '4', title: 'Get Tickets', desc: 'Receive your QR code tickets via email and SMS' }
             ].map((step) => (
               <div key={step.num} className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transform hover:-translate-y-2 transition-all">
-                <div className="w-16 h-16 bg-[#8B5E3C] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {step.num}
                 </div>
-                <h3 className="text-xl font-bold text-[#6B4A2E] mb-2">{step.title}</h3>
+                <h3 className="text-xl font-bold text-primary-dark mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.desc}</p>
               </div>
             ))}
@@ -338,7 +338,7 @@ function App() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#6B4A2E] to-[#8B5E3C] text-white">
+      <section className="py-16 px-4 bg-gradient-to-r from-primary-dark to-primary text-white">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Never Miss a Show</h2>
           <p className="text-lg md:text-xl text-white/90 mb-8">
@@ -348,9 +348,9 @@ function App() {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-6 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+              className="flex-1 px-6 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-secondary"
             />
-            <button className="px-8 py-3 bg-[#D4AF37] text-gray-900 rounded-full font-semibold hover:bg-[#C4A030] transform hover:-translate-y-1 transition-all">
+            <button className="px-8 py-3 bg-secondary text-gray-900 rounded-full font-semibold hover:bg-[#C4A030] transform hover:-translate-y-1 transition-all">
               Subscribe
             </button>
           </div>
@@ -364,14 +364,14 @@ function App() {
             {/* Brand Section */}
             <div>
               <h3 className="text-2xl font-bold mb-4">
-                Theater<span className="text-[#D4AF37]">HUB</span>
+                Theater<span className="text-secondary">HUB</span>
               </h3>
               <p className="text-gray-400 mb-4">
                 Centralized Ticketing and Seat Reservation Platform
               </p>
               <div className="flex gap-4">
                 {['📘', '🐦', '📷', '🎬'].map((icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-gray-900 transition-all transform hover:-translate-y-1">
+                  <a key={i} href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary hover:text-gray-900 transition-all transform hover:-translate-y-1">
                     {icon}
                   </a>
                 ))}
@@ -382,12 +382,12 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4 relative inline-block">
                 Quick Links
-                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-[#D4AF37]"></span>
+                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-secondary"></span>
               </h4>
               <ul className="space-y-2">
                 {['About Us', 'Blogs', 'FAQs', 'Terms of Service', 'Privacy Policy'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                    <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
                       {item}
                     </a>
                   </li>
@@ -399,12 +399,12 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4 relative inline-block">
                 Support
-                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-[#D4AF37]"></span>
+                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-secondary"></span>
               </h4>
               <ul className="space-y-2">
                 {['Help Center', 'Our Contact', 'Register Theater', 'Report Issue'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-[#D4AF37] transition-colors">
+                    <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
                       {item}
                     </a>
                   </li>
@@ -416,7 +416,7 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4 relative inline-block">
                 Contact Info
-                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-[#D4AF37]"></span>
+                <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-secondary"></span>
               </h4>
               <div className="space-y-3 text-gray-400">
                 <p className="flex items-center gap-2">📧 info@theaterhub.com</p>
